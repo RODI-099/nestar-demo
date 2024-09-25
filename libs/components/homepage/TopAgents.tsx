@@ -3,8 +3,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import PopularPropertyCard from "./PopularPropertiyCard";
-import TopAgentsCard from "./TopAgentsCard";
+import TopAgentsCard from "./TopAgentsCards";
+
 
 const TopAgents = ({ initialInput, ...props }: any) => {
   const [topAgents, setTopAgents] = useState<number[]>(initialInput);
