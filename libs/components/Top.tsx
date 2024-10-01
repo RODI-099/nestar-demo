@@ -5,23 +5,26 @@ import useDeviceDetect from "../hooks/useDeviceDetect";
 
 const Top = () => {
   const device = useDeviceDetect();
-
-  if(device == "mobile") {
-    return (<Stack className={"navbar"}>
-      <Link href={"/property"}>
-                <div>Properties</div>
-              </Link>
-              <Link href={"/agent"}>
-                <div>Agents</div>
-              </Link>
-              <Link href={"/community"}>
-                <div>Community</div>
-              </Link>
-              <Link href={"/cs"}>
-                <div>CS</div>
-              </Link>
-    </Stack>);
-
+  if (device === "mobile") {
+    return (
+      <Stack className="navbar">
+        <Link href={"/"}>
+        <div>Home</div>
+        </Link>
+        <Link href={"/property"}>
+          <div>Properties</div>
+        </Link>
+        <Link href={"/agent"}>
+          <div>Agents</div>
+        </Link>
+        <Link href={"/community"}>
+          <div>Community</div>
+        </Link>
+        <Link href={"/cs"}>
+          <div>CS</div>
+        </Link>
+      </Stack>
+    );
   } else {
     return (
       <Stack className={"navbar"}>
@@ -51,7 +54,7 @@ const Top = () => {
                 <div className={"login-user"}>
                   <img src={"/img/profile/defaultUser.svg"} alt="" />
                 </div>
-  
+
                 <Menu id="basic-menu" sx={{ mt: "5px" }} open={false}>
                   <MenuItem>
                     <Logout
@@ -67,9 +70,7 @@ const Top = () => {
         </Stack>
       </Stack>
     );
-
   }
-  
 };
 
 export default Top;
